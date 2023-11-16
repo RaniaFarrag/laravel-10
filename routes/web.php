@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Auth\SocialiteController;
+use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,4 +22,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::prefix('auth')->group(function (){
+   Route::get('redirect/facebook', [SocialiteController::class, 'redirectToFacebook'])
+            ->name('redirect_to_facebook');
+
+   Route::get('redirect/google', [SocialiteController::class, 'redirectToGoogle'])
+            ->name('redirect_to_google');
+
+   Route::get('facebook/callback', [SocialiteController::class, 'retrieveFacebookCallback']);
+   Route::get('google/callback', [SocialiteController::class, 'retrieveGoogleCallback']);
+
+});
