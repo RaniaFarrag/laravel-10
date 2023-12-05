@@ -12,7 +12,7 @@
         <div class="col-10 offset-1 mt-5">
             <div class="card">
                 <div class="card-header bg-primary">
-                    <h3 class="text-white">Laravel PayPal Payment Gateway Integration Example - ItSolutionStuff.com</h3>
+                    <h3 class="text-white">Pay With PayPal Gateway</h3>
                 </div>
                 <div class="card-body">
 
