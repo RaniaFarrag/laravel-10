@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\SocialiteController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Payment\PayPalController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -35,3 +36,12 @@ Route::prefix('auth')->group(function (){
    Route::get('google/callback', [SocialiteController::class, 'retrieveGoogleCallback']);
 
 });
+
+Route::prefix('paypal')->middleware('auth')->group(function (){
+    Route::get('/', [PayPalController::class, 'index'])->name('paypal');
+    Route::get('/payment', [PayPalController::class, 'payment'])->name('paypal.payment');
+    Route::get('/payment/success', [PayPalController::class, 'paymentSuccess'])->name('paypal.payment.success');
+    Route::get('/payment/cancel', [PayPalController::class, 'paymentCancel'])->name('paypal.payment.cancel');
+});
+
+

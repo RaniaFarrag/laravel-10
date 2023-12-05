@@ -12,5 +12,16 @@
 This is personal Repository using laravel 10 framework for trying and work on advanced features such as:
 
 - Integration with Social Media (https://laravel.com/docs/10.x/socialite).
-- Integration with Payment gateway ()
+- Integration with Payment gateway using (Paypal)
 - Send SMS
+
+
+## Paypal Configuration
+Make account on paypal and your own info in .env file 
+
+PAYPAL_MODE=sandbox
+PAYPAL_SANDBOX_API_USERNAME=
+PAYPAL_SANDBOX_API_PASSWORD=
+PAYPAL_SANDBOX_API_SECRET=
+PAYPAL_CURRENCY=USD
+PAYPAL_SANDBOX_API_CERTIFICATE=
