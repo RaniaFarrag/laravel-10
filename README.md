@@ -9,15 +9,15 @@
 
 ## About This Repository
 
-This is personal Repository using laravel 10 framework for trying and work on advanced features such as:
+This is Personal Repository using laravel 10 framework for trying and work on advanced features such as:
 
 - Integration with Social Media (https://laravel.com/docs/10.x/socialite).
 - Integration with Payment gateway using (Paypal)
-- Send SMS
+- Sending SMS using (Vonage)
 
 
 ## Paypal Configuration
-Make account on paypal and your own info in .env file 
+Make account on paypal and add your own info in .env file 
 
 PAYPAL_MODE=sandbox
 PAYPAL_SANDBOX_API_USERNAME=
