@@ -9,7 +9,7 @@
 
 ## About This Repository
 
-This is Personal Repository using laravel 10 framework for trying and work on advanced features such as:
+This is a Personal Repository using laravel 10 framework for trying and work on advanced features such as:
 
 - Integration with Social Media (https://laravel.com/docs/10.x/socialite).
 - Integration with Payment gateway using (Paypal)
